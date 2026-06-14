@@ -82,6 +82,12 @@ streamlit run app.py
 
 ---
 
+## Dashboard Preview
+
+![Dashboard](images/dashboard.png)
+
+---
+
 ## Tech Stack
 
 Python · NumPy · SciPy · Streamlit · Plotly
