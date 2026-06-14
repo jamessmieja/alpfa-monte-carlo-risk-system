@@ -84,7 +84,14 @@ streamlit run app.py
 
 ## Dashboard Preview
 
+### Single Event Analysis
 ![Dashboard](images/dashboard.png)
+
+### Portfolio Analysis
+![Portfolio](images/portfolio.png)
+
+### Event Format Comparison
+![Comparison](images/comparison.png)
 
 ---
 
