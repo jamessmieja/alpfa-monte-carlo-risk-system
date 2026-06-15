@@ -88,7 +88,7 @@ streamlit run app.py
 ![Dashboard](images/dashboard.png)
 
 ### Portfolio Analysis
-![Portfolio](images/portfolio.png)
+![Portfolio](images/dashboard.png)
 
 ### Event Format Comparison
 ![Comparison](images/comparison.png)

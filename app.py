@@ -108,6 +108,21 @@ with tab1:
                           margin=dict(l=10,r=10,t=10,b=40),
                           xaxis=dict(title="P&L ($)", tickformat="$,.0f"),
                           yaxis=dict(title="Scenarios"))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+        fig.update_layout(
+            font=dict(
+                color="black",
+                size=14
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption(f"🟢 Profitable · 🟡 Loss · 🔴 Tail risk · Recommended reserve: **{fmt(abs(cvar_v))}**")
 
@@ -125,6 +140,21 @@ with tab1:
                           margin=dict(l=10,r=60,t=10,b=40),
                           xaxis=dict(title="P&L impact ($)", tickformat="$,.0f"),
                           yaxis=dict(autorange="reversed"))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+        fig.update_layout(
+            font=dict(
+                color="black",
+                size=14
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Which parameter moves your P&L the most under a shock scenario")
 
@@ -140,6 +170,15 @@ with tab1:
         fig.update_traces(marker_size=4)
         fig.update_layout(height=260, plot_bgcolor="white", paper_bgcolor="white",
                           margin=dict(l=10,r=10,t=10,b=40))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption(f"ρ(attendance, revenue) = {rho:.2f} via Cholesky decomposition")
 
@@ -159,6 +198,15 @@ with tab1:
                           margin=dict(l=10,r=10,t=10,b=40),
                           xaxis=dict(title="P&L ($)", tickformat="$,.0f"),
                           yaxis=dict(title="Cumulative %", ticksuffix="%"))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Read any threshold to get its probability of occurring")
 
@@ -222,6 +270,21 @@ with tab2:
                           margin=dict(l=10,r=10,t=10,b=80),
                           yaxis=dict(title="Expected P&L ($)", tickformat="$,.0f"),
                           xaxis=dict(tickangle=-20))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+        fig.update_layout(
+            font=dict(
+                color="black",
+                size=14
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Error bars = ±1 standard deviation")
 
@@ -242,6 +305,21 @@ with tab2:
                           margin=dict(l=10,r=10,t=10,b=40),
                           xaxis=dict(title="Semester P&L ($)", tickformat="$,.0f"),
                           yaxis=dict(title="Scenarios"))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+        fig.update_layout(
+            font=dict(
+                color="black",
+                size=14
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
         st.caption(f"Portfolio VaR is lower than sum of individual VaRs — diversification benefit: **{fmt(pr['diversification_benefit'])}**")
 
@@ -383,6 +461,21 @@ with tab3:
                           legend=dict(orientation="h", y=1.0, x=0),
                           xaxis=dict(title="P&L ($)", tickformat="$,.0f"),
                           yaxis=dict(title="Density"))
+        fig.update_xaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+
+        fig.update_yaxes(
+            tickfont=dict(color="black"),
+            title_font=dict(color="black")
+        )
+        fig.update_layout(
+            font=dict(
+                color="black",
+                size=14
+            )
+        )
         st.plotly_chart(fig, use_container_width=True)
 
     # Risk-adjusted scorecard
@@ -424,6 +517,21 @@ with tab3:
                       margin=dict(l=10,r=10,t=10,b=40),
                       xaxis=dict(title="P&L difference ($)", tickformat="$,.0f"),
                       yaxis=dict(title="Scenarios"))
+    fig.update_xaxes(
+        tickfont=dict(color="black"),
+        title_font=dict(color="black")
+    )
+
+    fig.update_yaxes(
+        tickfont=dict(color="black"),
+        title_font=dict(color="black")
+    )
+    fig.update_layout(
+        font=dict(
+            color="black",
+            size=14
+        )
+    )
     st.plotly_chart(fig, use_container_width=True)
     st.caption(f"Green = {a['name']} outperforms · Red = {b['name']} outperforms · "
                f"Probability {a['name']} wins: **{pct(cr['p_a_beats_b'])}**")
