@@ -47,14 +47,14 @@ with tab1:
         st.markdown("## 🎯 Single Event Parameters")
 
         st.markdown("#### Revenue")
-        ticket_price       = st.slider("Ticket price ($)",           5,   100,  25)
-        expected_attendees = st.slider("Expected attendees",          10,  400,  90)
+        ticket_price       = st.slider("Ticket price ($)",           0,   100,  25)
+        expected_attendees = st.slider("Expected attendees",          0,  400,  90)
         sponsor_max        = st.slider("Max sponsorship ($)",         0,   10000,1500,step=100)
         sponsor_prob       = st.slider("Sponsor commit prob.",        0.0, 1.0,  0.65,step=0.01,format="%.2f")
 
         st.markdown("#### Costs")
-        venue_cost        = st.slider("Venue cost ($)",              100, 5000, 600, step=50)
-        catering_per_head = st.slider("Catering per head ($)",       5,   60,   18)
+        venue_cost        = st.slider("Venue cost ($)",              0, 5000, 600, step=50)
+        catering_per_head = st.slider("Catering per head ($)",       0,   60,   18)
         fixed_costs       = st.slider("AV & marketing ($)",          0,   3000, 400, step=50)
         surprise_cap      = st.slider("Surprise cost budget ($)",    0,   2000, 200, step=50)
 
